@@ -1,27 +1,25 @@
 <template>
   <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light col-9 mx-auto">
+        <nav class="navbar navbar-expand navbar-light bg-light col-9 mx-auto">
             <div class="container-fluid">
                 <img src="../../assets/images/classic_shop_logo1x.png" alt="Avada logo">
                 <div>
-                    <ul class="navbar-nav mb-3">
-
-                        <li class="nav-item dropdown" v-for="element, index in navList" :key="index">
-                            <a class="nav-link active dropdown-toggle" href="#" >{{ element.item }}</a>
+                    <ul class="navbar-nav mb-3" id="my_navbar-list">
+                        <!-- v-for in the array of elements in data. -->
+                        <li class="nav-item dropdown my_nav-item" v-for="element, index in navList" :key="index">
+                            <a class="nav-link dropdown-toggle">{{ element.item }}</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item">Action</a></li>
-                                <li><a class="dropdown-item">Another action</a></li>
-                                <li><a class="dropdown-item">Something else here</a></li>
+                                <li>Action</li>
+                                <li>Another action</li>
+                                <li>Something else here</li>
                             </ul>
                         </li>
-                        
-                        <!-- <li class="nav-item" v-for="element, index in navList" :key="index">
-                            <a class="nav-link active" aria-current="page" href="#">{{ element.item }}</a>
-                        </li> -->
                         <li>
-                            <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-search"></i></a>
+                            <button class="my_btn">SHOP NOW</button>
                         </li>
-                        
+                        <li>
+                            <a class="nav-link" aria-current="page" href="#"><i class="fas fa-search"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -50,5 +48,23 @@ export default {
 <style scoped lang="scss">
 @import "../../style/variables.scss";
 @import "../../style/general.scss";
+div.container-fluid{
+    font-size: 12px;
+
+    .my_navbar-list .my_nav-item:hover .nav-link{
+        color: $active-color;
+    };
+    .my_btn{
+        background-color: $active-color;
+        color: $clear-color;
+        font-weight: bold;
+        padding: 5px 10px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 50px;
+    }
+}
+
+    
 
 </style>
