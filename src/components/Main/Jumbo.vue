@@ -1,0 +1,55 @@
+<template>
+  <section class="jumbo container-fluid">
+      <div class="row">
+          <div class="col-6 mx-auto text-center" id="jumbo">
+                <h1>Brand New Arrivals</h1>
+                <h4>New collection from new york</h4>
+                <button class="my_transparent-btn">VIEW ALL</button>
+                <button class="my_transparent-btn">LOOKBOOK</button>
+          </div>
+      </div>
+  </section>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped lang="scss">
+@import "../../style/variables.scss";
+@import "../../style/general.scss";
+
+.jumbo{
+    background-image: url(../../assets/images/home1_slide_three_bg_2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    color: $clear-color;
+    #jumbo{
+        padding-top: 120px;
+
+        h1{
+        font-weight: bolder;
+        font-size: 60px;
+        }
+        h4{
+            padding: 20px 0;
+            text-transform: uppercase;
+        }
+        .my_transparent-btn{
+            background-color: rgba(255, 255, 254, 0.10);
+            color: $clear-color;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 2px solid $clear-color;
+            border-radius: 50px;
+        }
+    }
+    
+}
+
+</style>
