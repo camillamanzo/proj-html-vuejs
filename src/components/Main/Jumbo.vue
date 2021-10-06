@@ -3,7 +3,7 @@
       <div class="row">
           <div class="col-6 mx-auto text-center" id="jumbo">
                 <h1>Brand New Arrivals</h1>
-                <h4>New collection from new york</h4>
+                <h5>New collection from new york</h5>
                 <button class="my_transparent-btn">VIEW ALL</button>
                 <button class="my_transparent-btn">LOOKBOOK</button>
           </div>
@@ -33,10 +33,10 @@ export default {
 
         h1{
         font-weight: bolder;
-        font-size: 60px;
+        font-size: 65px;
         }
-        h4{
-            padding: 20px 0;
+        h5{
+            padding: 10px 0 20px;
             text-transform: uppercase;
         }
         .my_transparent-btn{

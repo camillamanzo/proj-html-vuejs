@@ -1,6 +1,6 @@
 <template>
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand navbar-light bg-light col-9 mx-auto">
+      <div class="container-fluid" id="header-account">
+        <nav class="navbar navbar-expand navbar-light bg-light col-9 mx-auto p-0">
             <div class="container-fluid">
                 <div>
                     <ul class="navbar-nav">
@@ -61,7 +61,8 @@ export default {
 @import "../../style/variables.scss";
 @import "../../style/general.scss";
 
-div.container-fluid{
+#header-account{
+    border-bottom: 1px solid $dark-color;
     font-size: 12px;
 }
 
