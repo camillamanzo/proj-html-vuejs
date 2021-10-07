@@ -1,5 +1,6 @@
 <template>
-  <div class="container" id="best-seller">
+    <!-- section composed of title and img section -->
+    <div class="container" id="best-seller">
       <div class="row">
             <div class="col-9 mx-auto text-center d-flex mt-5 pt-3">
                 <div class="line my-4 mx-2"></div>
@@ -13,13 +14,13 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-1"><i class="fas fa-chevron-left fs-1"></i></div>
+            <div class="col-1 clearfix"><i class="fas fa-chevron-left fs-1 float-end"></i></div>
             <div class="col-2" v-for="x in bestSeller" :key="x">
                 <img :src="x.thumbs" alt="img">
             </div>
             <div class="col-1"><i class="fas fa-chevron-right fs-1"></i></div>
         </div>
-  </div>
+    </div>
 </template>
 
 <script>

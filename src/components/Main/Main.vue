@@ -16,10 +16,10 @@ import BestSeller from './BestSeller';
 export default {
     name: "Main",
     components: {
-    Jumbo,
-    Featured,
-    Collection,
-    BestSeller,
+      Jumbo,
+      Featured,
+      Collection,
+      BestSeller,
   }
 }
 </script>

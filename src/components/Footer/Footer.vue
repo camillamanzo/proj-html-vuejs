@@ -1,12 +1,17 @@
 <template>
   <footer>
-
+    <Subscribe />
   </footer>
 </template>
 
 <script>
+import Subscribe from './Subscribe'
+
 export default {
-    name: "Footer",
+  name: "Footer",
+  components: {
+    Subscribe,
+  }
 }
 </script>
 
