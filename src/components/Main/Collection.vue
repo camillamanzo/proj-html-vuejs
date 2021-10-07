@@ -1,14 +1,16 @@
 <template>
-  <section class="container-fluid">
+    <!-- collection section with infos from data  -->
+    <section class="container-fluid">
         <div class="row">
             <div class="col-4 wrapper" v-for="(x, i) in collections" :key="i">
-                <div :style='{ backgroundImage: `url(${x.bgPath})`}'>
-                    <h1>{{ x.coll }}</h1>
-                    <h4>{{ x.style }}</h4>
+                <div :style='{ backgroundImage: `url(${x.bgPath})`}' class="text-center">
+                    <h1 class="text-capitalize">{{ x.coll }}</h1>
+                    <h5 class="my-3">{{ x.style.toUpperCase() }}</h5>
+                    <button class="my_transparent-btn text-uppercase">show more</button>
                 </div>
             </div>
         </div>
-  </section>
+    </section>
 </template>
 
 <script>
@@ -44,12 +46,28 @@ export default {
 
 .wrapper{
     padding: 0;
+    color: $clear-color;
 
     div{
         height: 450px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        h1{
+            padding-top: 240px;
+            font-weight: bolder;
+        }
+
+        .my_transparent-btn{
+            background-color: $transparent-white;
+            color: $clear-color;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: 2px solid $clear-color;
+            border-radius: 50px;
+        }
     }
 }
 

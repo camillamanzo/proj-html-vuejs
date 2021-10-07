@@ -1,14 +1,15 @@
 <template>
-  <section class="jumbo container-fluid">
+    <!-- jumbo section with background image and transparent buttons -->
+    <section class="jumbo container-fluid">
       <div class="row">
           <div class="col-6 mx-auto text-center" id="jumbo">
-                <h1>Brand New Arrivals</h1>
-                <h5>New collection from new york</h5>
-                <button class="my_transparent-btn">VIEW ALL</button>
-                <button class="my_transparent-btn">LOOKBOOK</button>
-          </div>
-      </div>
-  </section>
+                <h1 class="text-capitalize">Brand new arrivals</h1>
+                <h5 class="text-capitalize">New collection from new york</h5>
+                <button class="my_transparent-btn text-uppercase">view all</button>
+                <button class="my_transparent-btn text-uppercase">lookbook</button>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -40,7 +41,7 @@ export default {
             text-transform: uppercase;
         }
         .my_transparent-btn{
-            background-color: rgba(255, 255, 254, 0.10);
+            background-color: $transparent-white;
             color: $clear-color;
             font-weight: bold;
             padding: 10px 20px;

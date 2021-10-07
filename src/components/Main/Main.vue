@@ -3,13 +3,15 @@
     <Jumbo />
     <Featured />
     <Collection />
+    <BestSeller />
   </main> 
 </template>
 
 <script>
-import Jumbo from './Jumbo.vue';
-import Featured from './Featured.vue'
-import Collection from './Collection.vue'
+import Jumbo from './Jumbo';
+import Featured from './Featured';
+import Collection from './Collection';
+import BestSeller from './BestSeller';
 
 export default {
     name: "Main",
@@ -17,6 +19,7 @@ export default {
     Jumbo,
     Featured,
     Collection,
+    BestSeller,
   }
 }
 </script>

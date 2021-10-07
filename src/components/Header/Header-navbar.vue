@@ -1,5 +1,6 @@
 <template>
-  <div class="container-fluid">
+    <!-- header's bottom navbar with data access to dropdown menu -->
+    <div class="container-fluid">
         <nav class="navbar navbar-expand navbar-light bg-light col-9 mx-auto">
             <div class="container-fluid">
                 <img src="../../assets/images/classic_shop_logo1x.png" alt="Avada logo">
@@ -15,7 +16,7 @@
                             </ul>
                         </li>
                         <li>
-                            <button class="my_btn">SHOP NOW</button>
+                            <button class="my_btn text-uppercase">Shop now</button>
                         </li>
                         <li>
                             <a class="nav-link" aria-current="page" href="#"><i class="fas fa-search"></i></a>

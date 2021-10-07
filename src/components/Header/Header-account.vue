@@ -1,7 +1,9 @@
 <template>
-      <div class="container-fluid" id="header-account">
+    <!-- header top navbar with access to account information -->
+    <div class="container-fluid" id="header-account">
         <nav class="navbar navbar-expand navbar-light bg-light col-9 mx-auto p-0">
             <div class="container-fluid">
+                <!-- navigation sites -->
                 <div>
                     <ul class="navbar-nav">
                         <li>
@@ -18,6 +20,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- drop down menus -->
                 <div>
                     <ul  class="navbar-nav">
                         <li class="nav-item dropdown my_nav-item">
