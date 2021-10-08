@@ -1,7 +1,23 @@
 <template>
-  <div class="fluid-container">
-
-  </div>
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-2" id="contact-info">
+                <img src="../../assets/images/classic_shop_logo_footer.png" alt="avada logo">
+                <div v-for="x in contact" :key="x">
+                    <p>{{ x }}</p>
+                </div>
+            </div>
+            <div class="col-2" id="top-rated">
+                
+            </div>
+            <div class="col-2" id="recent-posts">
+                
+            </div>
+            <div class="col-2" id="tags">
+                
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -10,13 +26,11 @@ export default {
     data() {
         return{
             contact: [
-                {
-                    street: "1234 North Main Street",
-                    city: "New York, NY 5555",
-                    phone: "254.355.46.56",
-                    email: "info@company.com",
-                    web: "Theme-Fusion.com"
-                }
+                "1234 North Main Street",
+                "New York, NY 5555",
+                "phone: 254.355.46.56",
+                "email: info@company.com",
+                "web: Theme-Fusion.com"
             ],
             topRated: [
                 {
