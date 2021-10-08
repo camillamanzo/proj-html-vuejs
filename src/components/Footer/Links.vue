@@ -2,19 +2,26 @@
     <div class="fluid-container" id="links">
         <div class="row d-flex justify-content-center">
             <div class="col-2" id="contact-info">
-                <img src="../../assets/images/classic_shop_logo_footer.png" alt="avada logo" class="logo-img">
+                <img src="../../assets/images/classic_shop_logo_footer.png" alt="avada logo" class="logo-img my-3 pb-3">
                 <div v-for="x in contact" :key="x">
-                    <p>{{ x }}</p>
+                    <p class="m-1">{{ x }}</p>
+                </div>
+                <div class="pt-3">
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                    <span><i class="fab fa-youtube"></i></span>
                 </div>
             </div>
             <div class="col-2" id="top-rated">
                 <h6>Top rated products</h6>
                 <div v-for="y in topRated" :key="y" class="d-flex justify-content-between">
                     <div>
-                        <p>{{ y.name }}</p>
+                        <p class="m-1">{{ y.name }}</p>
                         <span><i v-for="q in 5" :key="q" class="fas fa-star"></i></span>
-                        <p>{{ y.price }}</p>
+                        <p class="m-1">$ {{ y.price }}</p>
                     </div>
+                    <hr>
                     
                     <img :src="y.thumbs" :alt="y.name" class="thumbs">
                 </div>
@@ -23,12 +30,13 @@
                 <h6>Recent Posts</h6>
                 <div v-for="r in 6" :key="r">
                     <i class="fas fa-chevron-right"></i>
-                    <span>dnwjkfjkrfd dncjke jdnfj</span>
+                    <span> dnwjkfjkrfd dncjke jdnfj</span>
+                    <hr>
                 </div>
             </div>
             <div class="col-2" id="tags">
                 <h6>tags</h6>
-                <div class="my_tag" v-for="el in tags" :key="el">
+                <div class="my_tag p-1 m-1" v-for="el in tags" :key="el">
                     <span>{{ el }}</span>
                 </div>
             </div>
@@ -67,7 +75,7 @@ export default {
                 },
             ],
 
-            tags: ["black", "boots", "brown", "casual", "D&G", "Fabric", "Flowers", "Grey","black", "boots", "brown", "casual", "D&G", "Fabric", "Flowers", "Grey","black", "boots", "brown", "casual", "D&G", "Fabric"]
+            tags: ["black", "boots", "brown", "casual", "D&G", "Fabric", "Flowers", "Grey","black", "boots", "brownnvjdfkfhjgk", "casual", "D&G", "Fabric", "Flowers", "Grey","black", "boots", "brown", "casual"]
         }
     }
 }
@@ -79,6 +87,23 @@ export default {
 
 #links{
     background-color: $footer-bg-md;
+    color: $clear-color;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 50px 0;
+
+    h6{
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 12px;
+        padding-bottom: 20px;
+    }
+
+    hr{
+        color: $footer-bg-light;
+        height: 2px;
+        margin: 9px 0;
+    }
 
     .logo-img{
         width: 180px;
@@ -87,6 +112,25 @@ export default {
     .thumbs{
         width: 50px;
         height: 100%;
+        margin: 2px 0;
+    }
+
+    .my_tag{
+        border: 1px solid $footer-bg-light;
+        display: inline-block;
+    }
+
+    #contact-info{
+        i{
+            font-size: 16px;
+            margin: 0 5px;
+        }
+    }
+
+    #top-rated{
+        i{
+            color: $active-color;
+        }
     }
 }
 
