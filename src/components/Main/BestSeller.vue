@@ -37,18 +37,16 @@
                 <div class="hover-wrapper">
                     <div class="my_d-none">
 
-                        <div>
-                            <h5>Modern love tee</h5>
+                        <div class="text-center pt-3 position-text">
+                            <h5>Modern Love Tee</h5>
                             <div>women t-shirts</div>
                             <div>$ 68</div>
                         </div>
-                        
-                        <div>
+                        <div class="my_position-left">
                             <i class="fas fa-shopping-cart"></i>
                             <span> Add to cart</span>
                         </div>
-
-                        <div>
+                        <div class="my_position-right">
                             <i class="fas fa-list-ul"></i>
                             <span> Details</span>
                         </div>
@@ -126,7 +124,7 @@ export default {
         background: $active-hover;
         color: $clear-color;
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         left: 0;
         
 
@@ -138,7 +136,7 @@ export default {
 
     .seller-wrapper:hover .hover-wrapper{
         height: 100%;
-        font-size: 12px;
+        font-size: 15px;
 
         h5{
             font-weight: bolder;
@@ -147,6 +145,21 @@ export default {
 
     .seller-wrapper:hover .my_d-none{
         display: block;
+    }
+    .position-text{
+        position: absolute;
+        top: 0;
+        left: 30px;
+    }
+    .my_position-left{
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+    }
+    .my_position-right{
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
     }
 }
 </style>

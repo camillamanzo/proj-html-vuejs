@@ -1,8 +1,9 @@
 <template>
+
     <!-- section composed of title buttons and products -->
     <section class="container" id="featured">
-
         <div class="row">
+
             <!-- title -->
             <div class="col-9 mx-auto text-center d-flex mt-5 pt-3">
                 <div class="line my-4 mx-2"></div>
