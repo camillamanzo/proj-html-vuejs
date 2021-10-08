@@ -8,13 +8,29 @@
                 </div>
             </div>
             <div class="col-2" id="top-rated">
-                
+                <h6>Top rated products</h6>
+                <div v-for="y in topRated" :key="y" class="d-flex">
+                    <div>
+                        <p>{{ y.name }}</p>
+                        <span><i v-for="q in 5" :key="q" class="fas fa-star"></i></span>
+                        <p>{{ y.price }}</p>
+                    </div>
+                    
+                    <img :src="y.thumbs" :alt="y.name">
+                </div>
             </div>
-            <div class="col-2" id="recent-posts">
-                
+            <div class="col-2" id="recent-post">
+                <h6>Recent Posts</h6>
+                <div v-for="r in 6" :key="r">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>dnwjkfjkrfd dncjke jdnfj</span>
+                </div>
             </div>
             <div class="col-2" id="tags">
-                
+                <h6>tags</h6>
+                <div class="my_tag" v-for="el in tags" :key="el">
+                    <div>{{ el }}</div>
+                </div>
             </div>
         </div>
     </div>
@@ -49,10 +65,6 @@ export default {
                     price: 47,
                     thumbs: require("../../assets/images/spring_printed_dress-120x156.jpg"),
                 },
-            ],
-            
-            recentPost:[
-                {el: "ffjnieo hfuer iuhriewrh"},
             ],
 
             tags: ["black", "boots", "brown", "casual", "D&G", "Fabric", "Flowers", "Grey","black", "boots", "brown", "casual", "D&G", "Fabric", "Flowers", "Grey","black", "boots", "brown", "casual", "D&G", "Fabric"]
