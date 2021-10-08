@@ -15,7 +15,7 @@
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-1 clearfix"><i class="fas fa-chevron-left fs-1 float-end"></i></div>
-            <div class="col-2" v-for="x in bestSeller" :key="x">
+            <div class="col-2" v-for="x in bestSellerFirst" :key="x">
                 <img :src="x.thumbs" alt="img">
             </div>
             <div class="col-1"><i class="fas fa-chevron-right fs-1"></i></div>
@@ -28,7 +28,21 @@ export default {
     name: "BestSeller",
     data(){
         return{
-            bestSeller: [
+            bestSellerFirst: [
+                {thumbs: require("../../assets/images/black_elegant_leather_jacket-200x260.jpg"),},
+                {thumbs: require("../../assets/images/black_leather_jacket-200x260.jpg"),},
+                {thumbs: require("../../assets/images/blue_leather_jacket-200x260.jpg"),},
+                {thumbs: require("../../assets/images/hipster_black_top-200x260.jpg"),},
+                {thumbs: require("../../assets/images/spring_printed_dress-200x260.jpg"),},
+            ],
+            bestSellerSecond: [
+                {thumbs: require("../../assets/images/black_elegant_leather_jacket-200x260.jpg"),},
+                {thumbs: require("../../assets/images/black_leather_jacket-200x260.jpg"),},
+                {thumbs: require("../../assets/images/blue_leather_jacket-200x260.jpg"),},
+                {thumbs: require("../../assets/images/hipster_black_top-200x260.jpg"),},
+                {thumbs: require("../../assets/images/spring_printed_dress-200x260.jpg"),},
+            ],
+            bestSellerThird: [
                 {thumbs: require("../../assets/images/black_elegant_leather_jacket-200x260.jpg"),},
                 {thumbs: require("../../assets/images/black_leather_jacket-200x260.jpg"),},
                 {thumbs: require("../../assets/images/blue_leather_jacket-200x260.jpg"),},

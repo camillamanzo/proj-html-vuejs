@@ -63,6 +63,9 @@ div.container-fluid{
         margin: 0 10px;
         border: none;
         border-radius: 50px;
+        &:hover{
+            background-color: $active-hover;
+        }
     }
 }
 
