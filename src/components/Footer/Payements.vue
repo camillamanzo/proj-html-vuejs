@@ -1,6 +1,10 @@
 <template>
+
+    <!-- footer payements section -->
     <section id="footer-payements">
         <div class="fluid-container">
+
+            <!-- row with copyrights -->
             <div class="row justify-content-center">
                 <div class="col-7 pb-2">
                     <span class="ps-3">Copyright 2012 - 2020 |</span>
@@ -8,7 +12,8 @@
                     <span>All rights reserved |</span>
                     <span>Powered by WordPress</span>
                 </div>
-                
+            
+            <!-- row with img of cards -->
             </div>
             <div class="row justify-content-center">
                 <div class="col-3"><img src="../../assets/images/payment_cards_footer.png" alt="Payement"></div>
