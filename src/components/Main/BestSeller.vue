@@ -15,7 +15,7 @@
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-1 clearfix"><i class="fas fa-chevron-left fs-1 float-end"></i></div>
-            <div class="col-2" v-for="x in bestSellerFirst" :key="x">
+            <div class="col-2 hover-padding" v-for="x in bestSellerFirst" :key="x">
                 <img :src="x.thumbs" alt="img">
             </div>
             <div class="col-1"><i class="fas fa-chevron-right fs-1"></i></div>
@@ -74,6 +74,12 @@ export default {
     i{
         color: $dark-color;
         padding-top: 120px;
+        &:hover{
+            color: $footer-bg-light;
+        }
+    }
+    .hover-padding:hover{
+        padding: 10px;
     }
 }
 </style>

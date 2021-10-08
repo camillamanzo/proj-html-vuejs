@@ -48,6 +48,9 @@ export default {
             margin: 0 10px;
             border: 2px solid $clear-color;
             border-radius: 50px;
+            &:hover{
+                background-color: $transparent-hover;
+            }
         }
     }
     

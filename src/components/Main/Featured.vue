@@ -27,6 +27,16 @@
             <div class="product-wrapper col-3" v-for="(element, i) in products" :key="i">
                 <div class="my_products-img">
                     <img :src="element.thumbs" :alt="element.name">
+                    <!-- hover on transition -->
+                    <div class="hover-wrapper">
+                        <div class="my_d-none">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span> Add to cart</span>
+                            <br class="p-2">
+                            <i class="fas fa-list-ul ps-3"></i>
+                            <span> Details</span>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h5>{{ element.name }}</h5>
@@ -80,6 +90,11 @@ export default {
 
             ]
         }
+    },
+    methods: {
+        function: myMsg(content){
+        myVar = setTimeout(function(){ `content` }, 3000);
+        }
     }
 }
 </script>
@@ -111,6 +126,38 @@ export default {
         width: 150px;
         padding: 10px 10px;
         margin: 40px 0;
+        &:hover{
+            background-color: $clear-color;
+        }
+    }
+    .product-wrapper{
+        position: relative;
+    }
+
+    .hover-wrapper{
+        transition: all 1s ease;
+        width: 75%;
+        height: 0px;
+        background: $active-hover;
+        color: $clear-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        
+
+        .my_d-none{
+            margin: 150px 70px;
+            display: none;
+            transition: all 1.5s ease;
+        }
+    }
+
+    .product-wrapper:hover .hover-wrapper{
+        height: 100%;
+    }
+
+    .product-wrapper:hover .my_d-none{
+        display: block;
     }
 }
 
