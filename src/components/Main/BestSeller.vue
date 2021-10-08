@@ -30,7 +30,7 @@
             </div>
 
             <!-- wrapper with v-for -->
-            <div class="col-2 seller-wrapper" v-for="x in bestSeller" :key="x">
+            <div class="col-sm-10 col-md-5 col-lg-2 seller-wrapper" v-for="x in bestSeller" :key="x">
                 <img :src="x.thumbs" alt="img">
 
                 <!-- transition on hover -->

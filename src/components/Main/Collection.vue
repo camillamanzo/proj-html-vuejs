@@ -4,7 +4,7 @@
         <div class="row">
 
             <!-- v-for for infos in collection array -->
-            <div class="col-4 wrapper" v-for="(x, i) in collections" :key="i">
+            <div class="col-sm-12 col-lg-4 wrapper" v-for="(x, i) in collections" :key="i">
 
                 <!-- path to bg image -->
                 <div :style='{ backgroundImage: `url(${x.bgPath})`}' class="text-center">

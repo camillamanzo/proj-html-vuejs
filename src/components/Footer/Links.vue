@@ -1,60 +1,62 @@
 <template>
 
     <!-- footer section with links -->
-    <div class="fluid-container" id="links">
-        <div class="row d-flex justify-content-center">
+    <section id="links">
+        <div class="container">
+            <div class="row d-flex justify-content-around">
 
-            <!-- contact info -->
-            <div class="col-2" id="contact-info">
-                <img src="../../assets/images/classic_shop_logo_footer.png" alt="avada logo" class="logo-img my-3 pb-3">
-                <div v-for="x in contact" :key="x">
-                    <p class="m-1">{{ x }}</p>
-                </div>
-
-                <!-- social media links -->
-                <div class="pt-3">
-                    <span><i class="fab fa-facebook-f"></i></span>
-                    <span><i class="fab fa-twitter"></i></span>
-                    <span><i class="fab fa-instagram"></i></span>
-                    <span><i class="fab fa-youtube"></i></span>
-                </div>
-            </div>
-
-            <!-- top rated -->
-            <div class="col-2" id="top-rated">
-                <h6>Top rated products</h6>
-
-                <!-- v-for with info taken from data -->
-                <div v-for="y in topRated" :key="y" class="d-flex justify-content-between">
-                    <div>
-                        <p class="m-1">{{ y.name }}</p>
-                        <span><i v-for="q in 5" :key="q" class="fas fa-star"></i></span>
-                        <p class="m-1">$ {{ y.price }}</p>
+                <!-- contact info -->
+                <div class="col-sm-7 col-md-5 col-lg-2 pt-2" id="contact-info">
+                    <img src="../../assets/images/classic_shop_logo_footer.png" alt="avada logo" class="logo-img my-3 pb-3">
+                    <div v-for="x in contact" :key="x">
+                        <p class="m-1">{{ x }}</p>
                     </div>
-                    <hr>
-                    <img :src="y.thumbs" :alt="y.name" class="thumbs">
-                </div>
-            </div>
 
-            <!-- recent posr section -->
-            <div class="col-2" id="recent-post">
-                <h6>Recent Posts</h6>
-                <div v-for="r in 6" :key="r">
-                    <i class="fas fa-chevron-right"></i>
-                    <span> dnwjkfjkrfd dncjke jdnfj</span>
-                    <hr>
+                    <!-- social media links -->
+                    <div class="pt-5">
+                        <span><i class="fab fa-facebook-f"></i></span>
+                        <span><i class="fab fa-twitter"></i></span>
+                        <span><i class="fab fa-instagram"></i></span>
+                        <span><i class="fab fa-youtube"></i></span>
+                    </div>
                 </div>
-            </div>
 
-            <!-- tag section -->
-            <div class="col-2" id="tags">
-                <h6>tags</h6>
-                <div class="my_tag p-1 m-1" v-for="el in tags" :key="el">
-                    <span>{{ el }}</span>
+                <!-- top rated -->
+                <div class="col-sm-7 col-md-5 col-lg-2 pt-5" id="top-rated">
+                    <h6>Top rated products</h6>
+
+                    <!-- v-for with info taken from data -->
+                    <div v-for="y in topRated" :key="y" class="d-flex justify-content-between">
+                        <div>
+                            <p class="m-1">{{ y.name }}</p>
+                            <span><i v-for="q in 5" :key="q" class="fas fa-star"></i></span>
+                            <p class="m-1">$ {{ y.price }}</p>
+                        </div>
+                        <hr>
+                        <img :src="y.thumbs" :alt="y.name" class="thumbs">
+                    </div>
+                </div>
+
+                <!-- recent posr section -->
+                <div class="col-sm-7 col-md-5 col-lg-2 pt-5" id="recent-post">
+                    <h6>Recent Posts</h6>
+                    <div v-for="r in 6" :key="r">
+                        <i class="fas fa-chevron-right"></i>
+                        <span> dnwjkfjkrfd dncjke jdnfj</span>
+                        <hr>
+                    </div>
+                </div>
+
+                <!-- tag section -->
+                <div class="col-sm-7 col-md-5 col-lg-2 pt-5" id="tags">
+                    <h6>tags</h6>
+                    <div class="my_tag p-1 m-1" v-for="el in tags" :key="el">
+                        <span>{{ el }}</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -105,44 +107,49 @@ export default {
     font-weight: bold;
     padding: 50px 0;
 
-    h6{
-        text-transform: uppercase;
-        font-weight: bolder;
-        font-size: 12px;
-        padding-bottom: 20px;
-    }
+    .container{
+        width: 85%;
+    
 
-    hr{
-        color: $footer-bg-light;
-        height: 2px;
-        margin: 9px 0;
-    }
-
-    .logo-img{
-        width: 180px;
-    }
-
-    .thumbs{
-        width: 50px;
-        height: 100%;
-        margin: 2px 0;
-    }
-
-    .my_tag{
-        border: 1px solid $footer-bg-light;
-        display: inline-block;
-    }
-
-    #contact-info{
-        i{
-            font-size: 16px;
-            margin: 0 5px;
+        h6{
+            text-transform: uppercase;
+            font-weight: bolder;
+            font-size: 12px;
+            padding-bottom: 20px;
         }
-    }
 
-    #top-rated{
-        i{
-            color: $active-color;
+        hr{
+            color: $footer-bg-light;
+            height: 2px;
+            margin: 9px 0;
+        }
+
+        .logo-img{
+            width: 180px;
+        }
+
+        .thumbs{
+            width: 50px;
+            height: 100%;
+            margin: 2px 0;
+        }
+
+        .my_tag{
+            border: 1px solid $footer-bg-light;
+            display: inline-block;
+        }
+
+        #contact-info{
+            i{
+                font-size: 16px;
+                margin: 0 5px;
+            }
+        }
+
+        #top-rated{
+            i{
+                color: $active-color;
+            }
         }
     }
 }
