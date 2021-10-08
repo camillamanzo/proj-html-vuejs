@@ -1,8 +1,9 @@
 <template>
     <!-- section composed of title buttons and products -->
     <section class="container" id="featured">
-        <!-- title section -->
+
         <div class="row">
+            <!-- title -->
             <div class="col-9 mx-auto text-center d-flex mt-5 pt-3">
                 <div class="line my-4 mx-2"></div>
                 <div>
@@ -10,11 +11,14 @@
                 </div>
                 <div class="line my-4 mx-2"></div>
             </div>
+
+            <!-- subtitle -->
             <div class="col-9 mx-auto text-center">
                 <p>Must have products from pur top sellers</p>
             </div>
         </div>
-        <!-- buttons section -->
+
+        <!-- buttons -->
         <div class="row">
             <div class="d-flex justify-content-center">
                 <div v-for="x, i in features" :key="i">
@@ -22,28 +26,36 @@
                 </div>
             </div>
         </div>
-        <!-- products section with v-for from data -->
+
+        <!-- products section with v-for -->
         <div class="row">
             <div class="product-wrapper col-3" v-for="(element, i) in products" :key="i">
                 <div class="my_products-img">
                     <img :src="element.thumbs" :alt="element.name">
-                    <!-- hover on transition -->
+
+                    <!-- transition on hover -->
                     <div class="hover-wrapper">
-                        <div class="my_d-none">
+
+                        <!-- div with info -->
+                        <div class="my_d-none" >
                             <i class="fas fa-shopping-cart"></i>
                             <span> Add to cart</span>
                             <br class="p-2">
                             <i class="fas fa-list-ul ps-3"></i>
                             <span> Details</span>
                         </div>
+
                     </div>
                 </div>
+
+                <!-- info on product -->
                 <div>
                     <h5>{{ element.name }}</h5>
                     <p>{{ element.feature }}</p>
                     <p v-if="element.oldPrice"> ${{ element.oldPrice }} ${{ element.newPrice }}</p>
                     <p v-else>${{ element.newPrice }}</p>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -91,11 +103,6 @@ export default {
             ]
         }
     },
-    methods: {
-        function: myMsg(content){
-        myVar = setTimeout(function(){ `content` }, 3000);
-        }
-    }
 }
 </script>
 
@@ -141,7 +148,7 @@ export default {
         background: $active-hover;
         color: $clear-color;
         position: absolute;
-        bottom: 0;
+        bottom: 108px;
         left: 0;
         
 
@@ -153,7 +160,7 @@ export default {
     }
 
     .product-wrapper:hover .hover-wrapper{
-        height: 100%;
+        height: 80%;
     }
 
     .product-wrapper:hover .my_d-none{
