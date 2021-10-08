@@ -12,9 +12,9 @@
                     <span>All rights reserved |</span>
                     <span>Powered by WordPress</span>
                 </div>
-            
-            <!-- row with img of cards -->
             </div>
+
+            <!-- row with credit cards images -->
             <div class="row justify-content-center">
                 <div class="col-3"><img src="../../assets/images/payment_cards_footer.png" alt="Payement"></div>
             </div>
