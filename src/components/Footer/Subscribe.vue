@@ -1,16 +1,22 @@
 <template>
-  <div class="fluid-container" id="subscribe">
-      <div class="row d-flex justify-content-center">
-          <div class="d-flex col-5">
-              <div class="my_round"><i class="far fa-envelope fs-2"></i></div>
-              <h3 class="m-3">Subscribe now and get special offers</h3>
-          </div>
-          <form class="col-4 my-3">
-                <input type="text" placeholder="insert your email" id="email-btn">
-                <button class="my_btn text-uppercase">send</button>
-          </form>
-      </div>
-  </div>
+
+    <!-- subscription footer section  -->
+    <div class="fluid-container" id="subscribe">
+        <div class="row d-flex justify-content-center">
+
+            <!-- subscribe div -->
+            <div class="d-flex col-5">
+                <div class="my_round"><i class="far fa-envelope fs-2"></i></div>
+                <h3 class="m-3">Subscribe now and get special offers</h3>
+            </div>
+
+            <!-- form div -->
+            <form class="col-4 my-3">
+                    <input type="text" placeholder="insert your email" id="email-btn">
+                    <button class="my_btn text-uppercase">send</button>
+            </form>
+        </div>
+    </div>
 </template>
 
 <script>

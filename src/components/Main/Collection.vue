@@ -2,12 +2,17 @@
     <!-- collection section with infos from data  -->
     <section class="container-fluid">
         <div class="row">
+
+            <!-- v-for for infos in collection array -->
             <div class="col-4 wrapper" v-for="(x, i) in collections" :key="i">
+
+                <!-- path to bg image -->
                 <div :style='{ backgroundImage: `url(${x.bgPath})`}' class="text-center">
                     <h1 class="text-capitalize">{{ x.coll }}</h1>
                     <h5 class="my-3">{{ x.style.toUpperCase() }}</h5>
                     <button class="my_transparent-btn text-uppercase">show more</button>
                 </div>
+                
             </div>
         </div>
     </section>

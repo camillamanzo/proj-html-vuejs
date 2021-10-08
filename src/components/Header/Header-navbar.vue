@@ -3,10 +3,15 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand navbar-light bg-light col-9 mx-auto">
             <div class="container-fluid">
+
+                <!-- logo img -->
                 <img src="../../assets/images/classic_shop_logo1x.png" alt="Avada logo">
+
+                <!-- navbar with ul -->
                 <div>
                     <ul class="navbar-nav mb-3" id="my_navbar-list">
-                        <!-- v-for in the array of elements in data. -->
+
+                        <!-- v-for in the array of elements in data -->
                         <li class="nav-item dropdown my_nav-item" v-for="element, index in navList" :key="index">
                             <a class="nav-link dropdown-toggle">{{ element.item }}</a>
                             <ul class="dropdown-menu">
@@ -15,12 +20,13 @@
                                 <li>Something else here</li>
                             </ul>
                         </li>
-                        <li>
-                            <button class="my_btn text-uppercase">Shop now</button>
-                        </li>
-                        <li>
-                            <a class="nav-link" aria-current="page" href="#"><i class="fas fa-search"></i></a>
-                        </li>
+
+                        <!-- button -->
+                        <li><button class="my_btn text-uppercase">Shop now</button></li>
+
+                        <!-- imput -->
+                        <li><a class="nav-link" aria-current="page" href="#"><i class="fas fa-search"></i></a></li>
+
                     </ul>
                 </div>
             </div>

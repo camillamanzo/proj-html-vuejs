@@ -1,12 +1,20 @@
 <template>
+
     <!-- jumbo section with background image and transparent buttons -->
     <section class="jumbo container-fluid">
       <div class="row">
-          <div class="col-6 mx-auto text-center" id="jumbo">
+
+            <!-- div with jumbo background -->
+            <div class="col-6 mx-auto text-center" id="jumbo">
+
+                <!-- title -->
                 <h1 class="text-capitalize">Brand new arrivals</h1>
                 <h5 class="text-capitalize">New collection from new york</h5>
+
+                <!-- buttons -->
                 <button class="my_transparent-btn text-uppercase">view all</button>
                 <button class="my_transparent-btn text-uppercase">lookbook</button>
+                
             </div>
         </div>
     </section>

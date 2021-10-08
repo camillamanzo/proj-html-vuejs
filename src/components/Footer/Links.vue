@@ -1,11 +1,17 @@
 <template>
+
+    <!-- footer section with links -->
     <div class="fluid-container" id="links">
         <div class="row d-flex justify-content-center">
+
+            <!-- contact info -->
             <div class="col-2" id="contact-info">
                 <img src="../../assets/images/classic_shop_logo_footer.png" alt="avada logo" class="logo-img my-3 pb-3">
                 <div v-for="x in contact" :key="x">
                     <p class="m-1">{{ x }}</p>
                 </div>
+
+                <!-- social media links -->
                 <div class="pt-3">
                     <span><i class="fab fa-facebook-f"></i></span>
                     <span><i class="fab fa-twitter"></i></span>
@@ -13,8 +19,12 @@
                     <span><i class="fab fa-youtube"></i></span>
                 </div>
             </div>
+
+            <!-- top rated -->
             <div class="col-2" id="top-rated">
                 <h6>Top rated products</h6>
+
+                <!-- v-for with info taken from data -->
                 <div v-for="y in topRated" :key="y" class="d-flex justify-content-between">
                     <div>
                         <p class="m-1">{{ y.name }}</p>
@@ -22,10 +32,11 @@
                         <p class="m-1">$ {{ y.price }}</p>
                     </div>
                     <hr>
-                    
                     <img :src="y.thumbs" :alt="y.name" class="thumbs">
                 </div>
             </div>
+
+            <!-- recent posr section -->
             <div class="col-2" id="recent-post">
                 <h6>Recent Posts</h6>
                 <div v-for="r in 6" :key="r">
@@ -34,6 +45,8 @@
                     <hr>
                 </div>
             </div>
+
+            <!-- tag section -->
             <div class="col-2" id="tags">
                 <h6>tags</h6>
                 <div class="my_tag p-1 m-1" v-for="el in tags" :key="el">
